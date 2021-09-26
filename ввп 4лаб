@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float S,P,L;//площадь,периметр прямоугольника;длина окружности
+    float a=5,b=2;
+    S=a*b;
+    P=2*(a+b);
+    float d=3;//диаметр окружности
+    const float pi=3.14;
+    L=pi*d;
+    float sr=(a+b)/2; //среднее арифметическое двух чисел
+    float sumkv=pow(a,2)+pow(b,2);
+    float razkv=pow(b,2)-pow(a,2);
+    float prokv=pow(a,2)*pow(b,2);
+    float chakv=pow(a,2)/pow(b,2);
+    
+    float summod=fabs(a)+fabs(b);
+    float razmod=fabs(a)-fabs(b);
+    float promod=fabs(a)*fabs(b);
+    float chamod=fabs(a)/fabs(b);
+    //выводим результаты
+    printf("Площадь прямоугольника- %.1f\n",S);
+    printf("Периметр прямоугольника- %.1f\n",P);
+    printf("Длина окружности- %.3f\n",L);
+    printf("Среднее арифметическое a и b- %.3f\n",sr);
+    
+    printf("Сумма квадратов- %.3f\n",sumkv);
+    printf("Разность квадратов- %.3f\n",razkv);
+    printf("Произведение квадратов- %.3f\n",prokv);
+    printf("Частное квадратов- %.3f\n",chakv);
+    
+    printf("Сумма модулей- %.3f\n",summod);
+    printf("Разность модулей- %.3f\n",razmod);
+    printf("Произведение модулей- %.3f\n",promod);
+    printf("Частное модулей- %.3f\n",chamod);
+    return 0;
+}
