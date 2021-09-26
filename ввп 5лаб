@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{   
+    //1
+    printf("1 задание:\n");
+    int x1,x2,y1,y2;//координаты точек
+    printf("введите х первой координаты ");
+    scanf("%d",&x1);
+    printf("введите у первой координаты ");
+    scanf("%d",&y2);
+    printf("введите х второй координаты ");
+    scanf("%d",&x2);
+    printf("введите у второй координаты ");
+    scanf("%d",&y2);
+    int ras=sqrt(pow(x2-x1,2)+pow(y2-y1,2));//считаем расстояние между точками
+    printf("расстояние между двумя точками:%d\n",ras);
+    //2
+    printf("2 задание:\n");
+    int A=-6,B=-1,C=8;//точки на числовой оси
+    int AB=fabs(B-A);
+    int BC=fabs(C-B);
+    int sum=AB+BC;
+    printf("Длина отрезка AB:%d\n",AB);
+    printf("Длина отрезка BC:%d\n",BC);
+    printf("Сумма отрезков AB и BC:%d\n",sum);
+    //3
+    printf("3 задание:\n");
+    int a=-9,c=3,b=10;
+    int proiz=fabs(c-a)*fabs(b-c);//считаем произведение длинн отрезков
+    printf("Произведение отрезков ас и сb:%d\n",proiz);
+    //4
+    printf("4 задание:\n");
+    int X1=0,X2=5,Y1=7,Y2=1;//задаем коодинаты двух противоположных вершин прямоугольника 
+    int stor1=fabs(X2-X1);//тк изначально даны противоположне вершины прямоугольника,мы можем посчитать длины сторон так
+    int stor2=fabs(Y2-Y1);
+    int S=stor1*stor2;
+    int P=2*(stor1+stor2);
+    printf("Площадь прямоугольника:%d\n",S);
+    printf("Периметр прямоугольника:%d\n",P);
+    //5
+    printf("5 задание:\n");
+    float q1=1,q2=0,q3=3,w1=1,w2=5,w3=5;//задаем координаты
+    //находим стороны треугольника
+    float z=sqrt(pow(q2-q1,2)+pow(w2-w1,2));
+    float x=sqrt(pow(q3-q2,2)+pow(w3-w2,2));
+    float v=sqrt(pow(q1-q3,2)+pow(w1-w3,2));
+    float per=z+x+v;
+    float pper=per/2;
+    float plos=sqrt(pper*(pper-z)*(pper-x)*(pper-v));//используем формулу Герона
+    printf("Площадь треугольника:%.1f\n",plos);
+    printf("Периметр треугольника:%.1f\n",per);
+    return 0;
+}
