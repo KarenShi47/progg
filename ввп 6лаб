@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    printf("1 задание\n");
+    int a=3,b=5,c;//с-доп.переменная
+    c=a;
+    a=b;
+    b=c;
+    printf("a=%d\n",a);
+    printf("b=%d\n",b);
+    
+    printf("2 задание\n");
+    int A=7,B=9,C=3,D,I;//d,i-доп.переменные
+    D=A;
+    A=C;
+    I=B;
+    B=D;
+    C=I;
+    printf("A=%d\n",A);
+    printf("B=%d\n",B); 
+    printf("C=%d\n",C);
+    
+    printf("3 задание\n");
+    int A1=7,B1=9,C1=3,D1,I1;//d,i-доп.переменные
+    D1=A1;
+    I1=B1;
+    A1=I1;
+    B1=C1;
+    C1=D1;
+    printf("A1=%d\n",A1);
+    printf("B1=%d\n",B1); 
+    printf("C1=%d\n",C1);
+    
+    printf("4 задание\n");
+    float x,y;
+    printf("Введите Х-");
+    scanf("%f",&x);
+    y=3*pow(x,6)-6*pow(x,2)-7;
+    printf("y=%.2f\n",y);
+    
+    printf("5 задание\n");
+    float X,Y;
+    printf("Введите Х-");
+    scanf("%f",&X);
+    Y=4*pow(X-3,6)-7*pow(X-3,3)+2;
+    printf("y=%.2f\n",Y);
+    
+    printf("6 задание\n");
+    int p,P;
+    printf("Введите число-");
+    scanf("%d",&p);
+    P=p*p;
+    p=P*P;
+    P=p*p;
+    printf("P^8=%d\n",P);
+ 
+    printf("7 задание\n");
+    int u,r;
+    long int U;//берем такой тип данных для большего диапазона значений
+    printf("Введите число-");
+    scanf("%d",&u);
+    U=u*u;//2 
+    r=u*U;//3
+    r=r*U;//5
+    U=r*r;//10
+    U=U*r;//15
+    printf("U^15=%ld\n",U);
+    return 0;
+}
