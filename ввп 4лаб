@@ -37,3 +37,54 @@ int main()
     printf("Частное модулей- %.3f\n",chamod);
     return 0;
 }
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float S,P,L;//площадь,периметр прямоугольника;длина окружности
+    float a,b;
+    printf("Введите стороны прямоугольника\n");
+    scanf("%f",&a);
+    scanf("%f",&b);
+    S=a*b;
+    P=2*(a+b);
+    printf("Площадь прямоугольника- %.1f\n",S);
+    printf("Периметр прямоугольника- %.1f\n",P);
+    
+    float d;//диаметр окружности
+    printf("Введите диаетр окружности\n");
+    scanf("%f",&d);
+    const float pi=3.14;
+    L=pi*d; 
+    printf("Длина окружности- %.3f\n",L);
+    
+    float A,B;
+    printf("Введите два числа\n");
+    scanf("%f",&A);
+    scanf("%f",&B);
+    float sr=(A+B)/2; //среднее арифметическое двух чисел 
+    printf("Среднее арифметическое a и b- %.3f\n",sr);
+    float sumkv=pow(A,2)+pow(B,2);
+    float razkv=pow(B,2)-pow(A,2);
+    float prokv=pow(A,2)*pow(B,2);
+    float chakv=pow(A,2)/pow(B,2);
+    float summod=fabs(A)+fabs(B);
+    float razmod=fabs(A)-fabs(B);
+    float promod=fabs(A)*fabs(B);
+    float chamod=fabs(A)/fabs(B);
+
+    printf("Сумма квадратов- %.2f\n",sumkv);
+    printf("Разность квадратов- %.2f\n",razkv);
+    printf("Произведение квадратов- %.2f\n",prokv);
+    printf("Частное квадратов- %.2f\n",chakv);
+
+    printf("Сумма модулей- %.2f\n",summod);
+    printf("Разность модулей- %.2f\n",razmod);
+    printf("Произведение модулей- %.2f\n",promod);
+    printf("Частное модулей- %.2f\n",chamod);
+       return 0;
+}
+   
+    
