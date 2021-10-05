@@ -53,3 +53,87 @@ int main()
     printf("Периметр треугольника:%.1f\n",per);
     return 0;
 }
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{   
+    //1
+    printf("1 задание:\n");
+    float x1,x2,y1,y2;//координаты точек
+    printf("введите х первой координаты ");
+    scanf("%f",&x1);
+    printf("введите у первой координаты ");
+    scanf("%f",&y2);
+    printf("введите х второй координаты ");
+    scanf("%f",&x2);
+    printf("введите у второй координаты ");
+    scanf("%f",&y2);
+    float ras=sqrt(pow(x2-x1,2)+pow(y2-y1,2));//считаем расстояние между точками
+    printf("расстояние между двумя точками:%f\n\n",ras);
+    //2
+    printf("2 задание:\n");
+    float A,B,C;//точки на числовой оси
+    printf("Введите точки на числовой оси в порядке возрастания\n");
+    scanf("%f",&A);
+    scanf("%f",&B);
+    scanf("%f",&C);
+    float AB=fabs(B-A);
+    float BC=fabs(C-B);
+    float sum=AB+BC;
+    printf("Длина отрезка AB:%.2f\n",AB);
+    printf("Длина отрезка BC:%.2f\n",BC);
+    printf("Сумма отрезков AB и BC:%.2f\n\n",sum);
+    //3
+    printf("3 задание:\n");
+    float a,c,b;
+    printf("Введите точки на числовой оси в порядке возрастания\n");
+    scanf("%f",&a);
+    scanf("%f",&c);
+    scanf("%f",&b);
+    float proiz=fabs(c-a)*fabs(b-c);//считаем произведение длинн отрезков
+    printf("Произведение отрезков ас и сb:%f\n\n",proiz);
+    //4
+    printf("4 задание:\n");
+    float X1,X2,Y1,Y2;//задаем коодинаты двух противоположных вершин прямоугольника 
+    printf("введите х первой координаты ");
+    scanf("%f",&X1);
+    printf("введите у первой координаты ");
+    scanf("%f",&Y2);
+    printf("введите х второй координаты ");
+    scanf("%f",&X2);
+    printf("введите у второй координаты ");
+    scanf("%f",&Y2);
+    int stor1=fabs(X2-X1);//тк изначально даны противоположне вершины прямоугольника,мы можем посчитать длины сторон так
+    int stor2=fabs(Y2-Y1);
+    int S=stor1*stor2;
+    int P=2*(stor1+stor2);
+    printf("Площадь прямоугольника:%d\n",S);
+    printf("Периметр прямоугольника:%d\n\n",P);
+    //5
+    printf("5 задание:\n");
+    float q1,q2,q3,w1,w2,w3;//задаем координаты
+    printf("введите х первой координаты ");
+    scanf("%f",&q1);
+    printf("введите у первой координаты ");
+    scanf("%f",&w2);
+    printf("введите х второй координаты ");
+    scanf("%f",&q2);
+    printf("введите у второй координаты ");
+    scanf("%f",&w2);
+    printf("введите х третьей координаты ");
+    scanf("%f",&q3);
+    printf("введите у третьей координаты ");
+    scanf("%f",&w3);
+    //находим стороны треугольника
+    float z=sqrt(pow(q2-q1,2)+pow(w2-w1,2));
+    float x=sqrt(pow(q3-q2,2)+pow(w3-w2,2));
+    float v=sqrt(pow(q1-q3,2)+pow(w1-w3,2));
+    float per=z+x+v;
+    float pper=per/2;
+    float plos=sqrt(pper*(pper-z)*(pper-x)*(pper-v));//используем формулу Герона
+    printf("Площадь треугольника:%.1f\n",plos);
+    printf("Периметр треугольника:%.1f\n",per);
+    return 0;
+}
